@@ -1,0 +1,30 @@
+
+/* Class = "UILabel"; text = "Likes:"; ObjectID = "2A5-64-jLs"; */
+"2A5-64-jLs.text" = "Likes:";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Arz-Oy-BDn"; */
+"Arz-Oy-BDn.text" = "Label";
+
+/* Class = "UILabel"; text = "Reposts:"; ObjectID = "HNN-mq-FRW"; */
+"HNN-mq-FRW.text" = "Reposts:";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Iaj-rA-1pf"; */
+"Iaj-rA-1pf.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Uj8-Yp-6j2"; */
+"Uj8-Yp-6j2.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "WTK-2w-DAP"; */
+"WTK-2w-DAP.text" = "Label";
+
+/* Class = "UILabel"; text = "Author name:"; ObjectID = "Xxu-OD-nrI"; */
+"Xxu-OD-nrI.text" = "Author name:";
+
+/* Class = "UITableViewController"; title = "News"; ObjectID = "aqQ-d5-rf3"; */
+"aqQ-d5-rf3.title" = "News";
+
+/* Class = "UILabel"; text = "Views:"; ObjectID = "f7X-9g-DOC"; */
+"f7X-9g-DOC.text" = "Views:";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "r03-kK-4BH"; */
+"r03-kK-4BH.text" = "Label";
