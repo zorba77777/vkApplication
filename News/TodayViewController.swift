@@ -20,33 +20,39 @@ class TodayViewController: UITableViewController, NCWidgetProviding {
       
         self.extensionContext?.widgetLargestAvailableDisplayMode = NCWidgetDisplayMode.expanded
         
-        guard let defaults = UserDefaults(suiteName: "group.News") else {
-            print("Something went wrong with container")
-            return
-        }
-        
-        if let id = defaults.string(forKey: "id"), let token = defaults.string(forKey: "token")  {
-            var urlString = "https://api.vk.com/method/newsfeed.get?filters=post&&v=5.68&count=20"
-            urlString += "&user_id=" + id
-            urlString += "&access_token=" + token
-            guard let url = URL(string: urlString) else {
-                print("Something went wrong with url")
+        let queue = DispatchQueue.global(qos: .default)
+        queue.async {
+            guard let defaults = UserDefaults(suiteName: "group.News") else {
+                print("Something went wrong with container")
                 return
             }
-            URLSession.shared.dataTask(with: url) {
-                [unowned self]
-                (data, response, error)
-                in
-                self.parser.parseData(data: data)
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
+            
+            if let id = defaults.string(forKey: "id"), let token = defaults.string(forKey: "token")  {
+                var urlString = "https://api.vk.com/method/newsfeed.get?filters=post&&v=5.68&count=20"
+                urlString += "&user_id=" + id
+                urlString += "&access_token=" + token
+                guard let url = URL(string: urlString) else {
+                    print("Something went wrong with url")
+                    return
                 }
-                }.resume()
-        } else {
-            warning.text = "You have to launch main vk app first to authorize"
-            parser.objects = nil
-            return
+                URLSession.shared.dataTask(with: url) {
+                    [unowned self]
+                    (data, response, error)
+                    in
+                    self.parser.parseData(data: data)
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
+                    }.resume()
+            } else {
+                DispatchQueue.main.async {
+                    self.warning.text = "You have to launch main vk app first to authorize"
+                    self.parser.objects = nil
+                    return
+                }
+            }
         }
+        
     }
     
     func widgetActiveDisplayModeDidChange(_ activeDisplayMode: NCWidgetDisplayMode, withMaximumSize maxSize: CGSize) {

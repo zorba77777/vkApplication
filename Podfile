@@ -9,8 +9,6 @@ target 'vkApplication' do
   
   pod "VK-ios-sdk"
 
-  pod "SwiftyVK"
-
   pod 'SwiftyJSON'
 
   pod 'RealmSwift'
