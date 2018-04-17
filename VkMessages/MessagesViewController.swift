@@ -13,30 +13,31 @@ class MessagesViewController: MSMessagesAppViewController {
     
     @IBOutlet weak var textMessage: UILabel!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        var sharedProfiles: String
-        sharedProfiles = "\n" + self.getSharedProfiles()
-        self.textMessage.text = (self.textMessage.text ?? "") + sharedProfiles
+    override func loadView() {
+        super.loadView()
+     
+        self.textMessage.text = (self.textMessage.text ?? "") + "\n" + self.getSharedProfiles()
     }
     
     @IBAction func sendMessage(_ sender: UIButton) {
         let layout = MSMessageTemplateLayout()
         layout.caption = "Sharing friends profiles"
         layout.subcaption = self.textMessage.text
+        
         let message = MSMessage()
         message.layout = layout
+        
         activeConversation?.insert(message, completionHandler: nil)
     }
     
-    func getSharedProfiles()->String {
-        var resultString: String = ""
-        guard let userDefaultsiMessage = UserDefaults(suiteName: "group.iMessage") else {
+    private func getSharedProfiles()->String {
+        guard let userDefaults = UserDefaults(suiteName: "group.iMessage") else {
             print("Something went wrong with group.iMessage container")
             return ""
         }
         
-        for (key, value) in userDefaultsiMessage.dictionaryRepresentation() {
+        var resultString = ""
+        for (key, value) in userDefaults.dictionaryRepresentation() {
             if Int(key) != nil {
                 guard let value = value as? Bool else {
                     print("Something went wrong with value of userId in userDefaults")
