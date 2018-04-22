@@ -46,4 +46,45 @@ enum VkRequestEnum: String {
             return baseUrl + self.rawValue + "&owner_id=" + userId + "&access_token=" + vkToken + "&v=" + version
         }
     }
+    
+    func getOnlineNews() -> [News]? {
+        
+        switch self {
+        
+        case .news:
+            let parser = NewsParsingClass()
+            
+            guard let defaults = UserDefaults(suiteName: "group.News") else {
+                print("Something went wrong with container")
+                return nil
+            }
+            
+            if let id = defaults.string(forKey: "id"), let token = defaults.string(forKey: "token")  {
+                
+                let urlString = baseUrl + self.rawValue + "&user_id=" + id + "&access_token=" + token + "&v=" + version
+                
+                guard let url = URL(string: urlString) else {
+                    print("Something went wrong with url")
+                    return nil
+                }
+                guard let data = try? Data(contentsOf: url) else {
+                    print("Something went wrong with url response")
+                    return nil
+                }
+                parser.parseData(data: data)
+                guard let news = parser.objects as? [News] else {
+                    print("Something went wrong with parsing news")
+                    return nil
+                }
+                return news
+            } else {
+                return nil
+            }
+        
+        default:
+            print("You can use function getOnlineNews() only with .news")
+            return nil
+        }
+    }
+    
 }

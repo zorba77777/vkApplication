@@ -34,7 +34,18 @@ class LoginFormController: UIViewController, VKSdkDelegate, VKSdkUIDelegate {
     }    
     
     func vkSdkShouldPresent(_ controller: UIViewController!) {
-        self.navigationController?.topViewController?.present(controller, animated: true, completion: nil)
+        if (self.presentedViewController != nil) {
+            self.dismiss(animated: true, completion: {
+                print("hide current modal controller if presents")
+                self.navigationController?.topViewController?.present(controller, animated: true, completion: {
+                    print("SFSafariViewController opened to login through a browser")
+                })
+            })
+        } else {
+            self.navigationController?.topViewController?.present(controller, animated: true, completion: {
+                print("SFSafariViewController opened to login through a browser")
+            })
+        }
     }
     
     func vkSdkNeedCaptchaEnter(_ captchaError: VKError!) {

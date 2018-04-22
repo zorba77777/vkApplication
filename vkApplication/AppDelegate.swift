@@ -43,8 +43,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Swift.Void) {
         
-        guard let news = DataManager.getOnlineNews() else {
-            print("Something went wrong with")
+        guard let news = VkRequestEnum.news.getOnlineNews() else {
+            print("Something went wrong with VkRequestEnum.news.getOnlineNews()")
             return
         }
 
