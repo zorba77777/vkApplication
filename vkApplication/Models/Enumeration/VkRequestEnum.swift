@@ -33,6 +33,7 @@ enum VkRequestEnum: String {
     case news = "newsfeed.get?filters=post"
     case post = "wall.post?friends_only=1&publish_date=1544572800"
     case friendRequests = "friends.getRequests"
+    case upload = "photos.getUploadServer"
     
     func getUrlString()->String {
         if userId == "" || vkToken == "" {
@@ -40,7 +41,7 @@ enum VkRequestEnum: String {
             return ""
         }
         switch self {
-        case .friends, .groups, .news, .friendRequests:
+        case .friends, .groups, .news, .friendRequests, .upload:
             return baseUrl + self.rawValue + "&user_id=" + userId + "&access_token=" + vkToken + "&v=" + version
         case .post:
             return baseUrl + self.rawValue + "&owner_id=" + userId + "&access_token=" + vkToken + "&v=" + version

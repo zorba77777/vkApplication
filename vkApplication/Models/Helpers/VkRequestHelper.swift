@@ -103,7 +103,12 @@ class VkRequestHelper {
     }
     
     func saveImagesInDocumentDirectory() {
-        for image in self.parser.images {
+        guard let images = self.parser.images else {
+            print("Something went wrong with downloaded images")
+            return
+        }
+        
+        for image in images {
             guard let imageData = self.getImageData(urlString: image.url) else {
                 print("Something went wrong with getting image data")
                 return

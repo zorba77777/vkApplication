@@ -26,6 +26,7 @@
 		24155132201C03770089C0AD /* FriendNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24155131201C03770089C0AD /* FriendNameTableViewCell.swift */; };
 		24155134201C1A5E0089C0AD /* GroupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24155133201C1A5E0089C0AD /* GroupTableViewController.swift */; };
 		24155136201C1A790089C0AD /* GroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24155135201C1A790089C0AD /* GroupTableViewCell.swift */; };
+		241ADF0620913593001376C0 /* ImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241ADF0520913593001376C0 /* ImagePickerViewController.swift */; };
 		242980A6207FED5500271C6A /* NewsDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242980A5207FED5500271C6A /* NewsDeserializer.swift */; };
 		242CDE6C202E3CCA00B6C411 /* VkRequestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242CDE6B202E3CCA00B6C411 /* VkRequestHelper.swift */; };
 		242CDE72202E542500B6C411 /* LoadFromDiskHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242CDE71202E542500B6C411 /* LoadFromDiskHelper.swift */; };
@@ -38,6 +39,7 @@
 		24729970207E8F020075AEE5 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2472996F207E8F020075AEE5 /* TodayViewController.swift */; };
 		24729973207E8F020075AEE5 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24729971207E8F020075AEE5 /* MainInterface.storyboard */; };
 		24729977207E8F020075AEE5 /* News.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2472996B207E8F020075AEE5 /* News.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		247BCD4C2093A09F00806AC2 /* UploadUrlDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247BCD4B2093A09F00806AC2 /* UploadUrlDeserializer.swift */; };
 		2487F5562083B919002CADA8 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2487F5552083B919002CADA8 /* Messages.framework */; };
 		2487F5592083B919002CADA8 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2487F5582083B919002CADA8 /* MessagesViewController.swift */; };
 		2487F55C2083B919002CADA8 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2487F55A2083B919002CADA8 /* MainInterface.storyboard */; };
@@ -163,6 +165,7 @@
 		24155131201C03770089C0AD /* FriendNameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendNameTableViewCell.swift; sourceTree = "<group>"; };
 		24155133201C1A5E0089C0AD /* GroupTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTableViewController.swift; sourceTree = "<group>"; };
 		24155135201C1A790089C0AD /* GroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTableViewCell.swift; sourceTree = "<group>"; };
+		241ADF0520913593001376C0 /* ImagePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerViewController.swift; sourceTree = "<group>"; };
 		242980A5207FED5500271C6A /* NewsDeserializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDeserializer.swift; sourceTree = "<group>"; };
 		242CDE6B202E3CCA00B6C411 /* VkRequestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VkRequestHelper.swift; sourceTree = "<group>"; };
 		242CDE71202E542500B6C411 /* LoadFromDiskHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFromDiskHelper.swift; sourceTree = "<group>"; };
@@ -178,6 +181,7 @@
 		24729972207E8F020075AEE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		24729974207E8F020075AEE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2472997C207E8FA30075AEE5 /* vkApplication.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = vkApplication.entitlements; sourceTree = "<group>"; };
+		247BCD4B2093A09F00806AC2 /* UploadUrlDeserializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadUrlDeserializer.swift; sourceTree = "<group>"; };
 		2487F5542083B919002CADA8 /* VkMessages.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = VkMessages.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		2487F5552083B919002CADA8 /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
 		2487F5582083B919002CADA8 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
@@ -310,6 +314,7 @@
 			isa = PBXGroup;
 			children = (
 				24F28DA6202560A700D92109 /* GroupDeserializer.swift */,
+				247BCD4B2093A09F00806AC2 /* UploadUrlDeserializer.swift */,
 				24F28DA2202536FC00D92109 /* UserDeserializer.swift */,
 				24CDE9452041B9A6003AF143 /* NewsDeserializer.swift */,
 				24AC752D2074307800B7666C /* NewFriendsDeserializer.swift */,
@@ -342,6 +347,7 @@
 			children = (
 				249EB69C201BC7C1004F4DE2 /* LoginFormController.swift */,
 				24AA110920704D0D00C444EB /* PostViewController.swift */,
+				241ADF0520913593001376C0 /* ImagePickerViewController.swift */,
 				246F4F32203931EB0043EA44 /* NewsControllers */,
 				249EB69E201BCB5D004F4DE2 /* FriendControllers */,
 				249EB6A1201BCBDD004F4DE2 /* CommunityControllers */,
@@ -835,6 +841,7 @@
 				2410D4AC20536B6900F37F25 /* FriendLoadFromRealm.swift in Sources */,
 				2410D4A12053334E00F37F25 /* Image.swift in Sources */,
 				24155130201BF4F00089C0AD /* FriendCollectionViewCell.swift in Sources */,
+				247BCD4C2093A09F00806AC2 /* UploadUrlDeserializer.swift in Sources */,
 				249EB69D201BC7C2004F4DE2 /* LoginFormController.swift in Sources */,
 				246F4F31203927EC0043EA44 /* NewsTableViewController.swift in Sources */,
 				24AC752E2074307800B7666C /* NewFriendsDeserializer.swift in Sources */,
@@ -863,6 +870,7 @@
 				2410D49D2053261900F37F25 /* FriendParsingClass.swift in Sources */,
 				24155134201C1A5E0089C0AD /* GroupTableViewController.swift in Sources */,
 				2410D4902053034100F37F25 /* VkRequestEnum.swift in Sources */,
+				241ADF0620913593001376C0 /* ImagePickerViewController.swift in Sources */,
 				2410D4A320533B6400F37F25 /* GroupParsingClass.swift in Sources */,
 				24CE9A392027727D00D37D63 /* UserDBDataModel.swift in Sources */,
 				249EB68B201BC6BD004F4DE2 /* AppDelegate.swift in Sources */,
@@ -1131,12 +1139,14 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = vkApplication/vkApplication.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2Z6NXW9238;
 				INFOPLIST_FILE = vkApplication/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.timursasin.vkApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1149,12 +1159,14 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = vkApplication/vkApplication.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2Z6NXW9238;
 				INFOPLIST_FILE = vkApplication/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.timursasin.vkApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

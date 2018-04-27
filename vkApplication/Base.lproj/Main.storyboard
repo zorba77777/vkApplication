@@ -107,7 +107,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Kc-I2-Dzr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="888" y="-824"/>
+            <point key="canvasLocation" x="887" y="-1198"/>
         </scene>
         <!--Friends-->
         <scene sceneID="sSE-Bh-Gn9">
@@ -147,7 +147,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cxz-2I-tca" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1590" y="-824"/>
+            <point key="canvasLocation" x="1590" y="-1198"/>
         </scene>
         <!--Friends Collection View Controller-->
         <scene sceneID="lHe-Gq-KH3">
@@ -190,7 +190,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BF8-cl-cKp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2281" y="-824"/>
+            <point key="canvasLocation" x="2278" y="-1198"/>
         </scene>
         <!--Groups-->
         <scene sceneID="aeD-0g-s2e">
@@ -207,7 +207,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bVk-NV-vdy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="887" y="-155"/>
+            <point key="canvasLocation" x="887" y="-518"/>
         </scene>
         <!--News-->
         <scene sceneID="seP-yR-OSq">
@@ -359,7 +359,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cFp-5c-NC3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="887" y="510"/>
+            <point key="canvasLocation" x="887" y="143"/>
         </scene>
         <!--Add post-->
         <scene sceneID="FJ6-cj-5HX">
@@ -412,7 +412,49 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B0K-8h-PYG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="886.95652173913049" y="1168.2065217391305"/>
+            <point key="canvasLocation" x="887" y="810"/>
+        </scene>
+        <!--Image Picker-->
+        <scene sceneID="6Bm-g0-yYo">
+            <objects>
+                <viewController title="Image Picker" id="UWv-fo-5Od" customClass="ImagePickerViewController" customModule="vkApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yyt-zb-p88">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YI9-3T-fPS">
+                                <rect key="frame" x="20" y="64" width="374" height="509"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSQ-jq-rlb">
+                                <rect key="frame" x="113" y="591" width="188" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Pick image to publish"/>
+                                <connections>
+                                    <action selector="selectExistingPictureOrVideo:" destination="UWv-fo-5Od" eventType="touchUpInside" id="FnX-I7-Jof"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4At-0f-pyi">
+                                <rect key="frame" x="143" y="629" width="129" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Publish image"/>
+                                <connections>
+                                    <action selector="publishImageInVk:" destination="UWv-fo-5Od" eventType="touchUpInside" id="0n5-Ks-Zuz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="QCu-bW-Ccm"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Image Picker" id="QEE-a6-MNp"/>
+                    <connections>
+                        <outlet property="imageView" destination="YI9-3T-fPS" id="w65-jZ-eSW"/>
+                        <outlet property="publishButton" destination="4At-0f-pyi" id="lhh-dP-0Gx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VVQ-O4-hqd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="892.75362318840587" y="1491.8478260869567"/>
         </scene>
         <!--Groups-->
         <scene sceneID="TNq-en-m8G">
@@ -449,7 +491,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jeN-nd-lsY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1590" y="-156"/>
+            <point key="canvasLocation" x="1590" y="-518"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="vE1-h8-7Nx">
@@ -465,6 +507,7 @@
                         <segue destination="FJw-Sb-Wum" kind="relationship" relationship="viewControllers" id="RBu-Na-TEw"/>
                         <segue destination="nbU-ZH-Xvs" kind="relationship" relationship="viewControllers" id="atd-Py-Kg5"/>
                         <segue destination="Q1A-EB-aqx" kind="relationship" relationship="viewControllers" id="00a-kl-MBq"/>
+                        <segue destination="UWv-fo-5Od" kind="relationship" relationship="viewControllers" id="s91-Xk-inO"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XSm-RB-gsN" userLabel="First Responder" sceneMemberID="firstResponder"/>
