@@ -149,7 +149,7 @@ class FriendListTableViewController: UITableViewController, VkTableViewControlle
             return
         }
         
-        for friend in self.objects {
+        for friend in friends {
             if userDefaultsiMessage.object(forKey: friend.id) == nil {
                 userDefaultsiMessage.set(false, forKey: friend.id)
             }
