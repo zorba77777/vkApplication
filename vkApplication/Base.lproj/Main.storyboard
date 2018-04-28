@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9EO-qf-lEh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9EO-qf-lEh">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -191,23 +191,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BF8-cl-cKp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2278" y="-1198"/>
-        </scene>
-        <!--Groups-->
-        <scene sceneID="aeD-0g-s2e">
-            <objects>
-                <navigationController title="Groups" id="FJw-Sb-Wum" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Groups" id="JwB-fQ-U6b"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ejc-cn-RhM">
-                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="Z7O-Zf-tCi" kind="relationship" relationship="rootViewController" id="vLs-yG-yfT"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bVk-NV-vdy" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="887" y="-518"/>
         </scene>
         <!--News-->
         <scene sceneID="seP-yR-OSq">
@@ -422,21 +405,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YI9-3T-fPS">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YI9-3T-fPS">
                                 <rect key="frame" x="20" y="64" width="374" height="509"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSQ-jq-rlb">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSQ-jq-rlb">
                                 <rect key="frame" x="113" y="591" width="188" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Pick image to publish"/>
                                 <connections>
                                     <action selector="selectExistingPictureOrVideo:" destination="UWv-fo-5Od" eventType="touchUpInside" id="FnX-I7-Jof"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4At-0f-pyi">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4At-0f-pyi">
                                 <rect key="frame" x="143" y="629" width="129" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Publish image"/>
                                 <connections>
                                     <action selector="publishImageInVk:" destination="UWv-fo-5Od" eventType="touchUpInside" id="0n5-Ks-Zuz"/>
@@ -444,6 +424,18 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="YI9-3T-fPS" firstAttribute="leading" secondItem="yyt-zb-p88" secondAttribute="leadingMargin" id="Mh8-vH-OFI"/>
+                            <constraint firstItem="4At-0f-pyi" firstAttribute="top" secondItem="bSQ-jq-rlb" secondAttribute="bottom" constant="8" symbolic="YES" id="WYc-4T-DXo"/>
+                            <constraint firstItem="bSQ-jq-rlb" firstAttribute="top" secondItem="YI9-3T-fPS" secondAttribute="bottom" constant="18" id="Waa-wm-YU7"/>
+                            <constraint firstItem="bSQ-jq-rlb" firstAttribute="centerX" secondItem="4At-0f-pyi" secondAttribute="centerX" id="XAY-M5-YPr"/>
+                            <constraint firstItem="4At-0f-pyi" firstAttribute="leading" secondItem="QCu-bW-Ccm" secondAttribute="leading" constant="143" id="XGL-AF-YAz"/>
+                            <constraint firstItem="YI9-3T-fPS" firstAttribute="trailing" secondItem="yyt-zb-p88" secondAttribute="trailingMargin" id="gMU-G8-o5i"/>
+                            <constraint firstItem="YI9-3T-fPS" firstAttribute="centerX" secondItem="bSQ-jq-rlb" secondAttribute="centerX" id="lNf-Aa-ifi"/>
+                            <constraint firstItem="bSQ-jq-rlb" firstAttribute="leading" secondItem="QCu-bW-Ccm" secondAttribute="leading" constant="113" id="o1o-UI-tj2"/>
+                            <constraint firstItem="QCu-bW-Ccm" firstAttribute="bottom" secondItem="4At-0f-pyi" secondAttribute="bottom" constant="28" id="ofS-d3-Pgl"/>
+                            <constraint firstItem="YI9-3T-fPS" firstAttribute="top" secondItem="QCu-bW-Ccm" secondAttribute="top" id="yNN-A5-KSq"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="QCu-bW-Ccm"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Image Picker" id="QEE-a6-MNp"/>
@@ -487,11 +479,12 @@
                             <outlet property="delegate" destination="Z7O-Zf-tCi" id="GQb-BP-gyr"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Groups" id="QW8-xD-RTa"/>
                     <navigationItem key="navigationItem" title="Groups" id="Tfg-RX-A7A"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jeN-nd-lsY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1590" y="-518"/>
+            <point key="canvasLocation" x="887" y="-514"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="vE1-h8-7Nx">
@@ -504,10 +497,10 @@
                     </tabBar>
                     <connections>
                         <segue destination="uYc-XW-S0b" kind="relationship" relationship="viewControllers" id="poG-7H-iF4"/>
-                        <segue destination="FJw-Sb-Wum" kind="relationship" relationship="viewControllers" id="RBu-Na-TEw"/>
                         <segue destination="nbU-ZH-Xvs" kind="relationship" relationship="viewControllers" id="atd-Py-Kg5"/>
                         <segue destination="Q1A-EB-aqx" kind="relationship" relationship="viewControllers" id="00a-kl-MBq"/>
                         <segue destination="UWv-fo-5Od" kind="relationship" relationship="viewControllers" id="s91-Xk-inO"/>
+                        <segue destination="Z7O-Zf-tCi" kind="relationship" relationship="viewControllers" id="MX0-Ci-isf"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XSm-RB-gsN" userLabel="First Responder" sceneMemberID="firstResponder"/>

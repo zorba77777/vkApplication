@@ -24,9 +24,12 @@ class LoadFromDiskHelper {
         }
     }
     
-    func getLoadedData()->Array<StructToFillTable> {
+    func getLoadedData()->Array<StructToFillTable>? {
         self.loader.load()
-        return self.loader.objects
+        guard let objects = self.loader.objects else {
+            return nil
+        }
+        return objects
     }
     
     func getDirectoryPath() -> String {

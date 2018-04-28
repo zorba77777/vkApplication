@@ -61,23 +61,22 @@ class ImagePickerViewController: UIViewController, UIImagePickerControllerDelega
         
         guard let userId = Int(idString) else { return }
         
-        let request: VKRequest = VKApi.uploadWallPhotoRequest(self.image, parameters: VKImageParameters.jpegImage(withQuality: 1), userId: userId, groupId: 0)
-        request.execute(resultBlock: {
+        let uploadRequest: VKRequest = VKApi.uploadWallPhotoRequest(self.image, parameters: VKImageParameters.jpegImage(withQuality: 1), userId: userId, groupId: 0)
+        uploadRequest.execute(resultBlock: {
             data in
             guard let response = data else { return }
             guard let array = response.json as? NSArray else { return }
             guard let dictionary = array[0] as? NSDictionary else { return }
             guard let owner_id = dictionary["owner_id"] as? Int else { return }
             guard let id = dictionary["id"] as? Int else { return }
-            let attachString = "photo" + String(owner_id) + "_" + String(id)
+            let photoAttachString = "photo" + String(owner_id) + "_" + String(id)
             
-            let post: VKRequest = VKApi.wall().post(
-                [
+            let postPhotoRequest: VKRequest = VKApi.wall().post([
                     "message":"",
-                    VK_API_ATTACHMENTS: attachString
+                    VK_API_ATTACHMENTS: photoAttachString
                 ])
 
-            post.execute(resultBlock: { (response) in
+            postPhotoRequest.execute(resultBlock: { (response) in
                 print(response as Any)
             }, errorBlock: { (error) in
                 print(error as Any)
@@ -125,17 +124,6 @@ class ImagePickerViewController: UIViewController, UIImagePickerControllerDelega
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion:nil)
-    }
-    
-    func convertToDictionary(text: String) -> [String: Any]? {
-        if let data = text.data(using: .utf8) {
-            do {
-                return try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
-            } catch {
-                print(error.localizedDescription)
-            }
-        }
-        return nil
     }
 }
 

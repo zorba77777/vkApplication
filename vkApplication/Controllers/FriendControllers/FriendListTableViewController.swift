@@ -144,6 +144,10 @@ class FriendListTableViewController: UITableViewController, VkTableViewControlle
             print("Something went wrong with group.iMessage container")
             return
         }
+        guard let friends = self.objects else {
+            print("Something went wrong with friends in iMessage")
+            return
+        }
         
         for friend in self.objects {
             if userDefaultsiMessage.object(forKey: friend.id) == nil {

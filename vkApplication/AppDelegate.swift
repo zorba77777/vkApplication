@@ -36,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
         backgroundTasksManager.checkNewFriends()
     }
     
-    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any?) -> Bool {
         VKSdk.processOpen(url, fromApplication: sourceApplication)
         return true
     }
