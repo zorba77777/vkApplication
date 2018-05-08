@@ -84,9 +84,6 @@ class TodayViewController: UITableViewController, NCWidgetProviding {
         
         let news = parser.objects[indexPath.row] as NewsStruct
         cell?.authorName.text = news.authorName
-        cell?.likesCount.text = news.likesCount
-        cell?.repostsCount.text = news.repostsCount
-        cell?.viewsCount.text = news.viewsCount
         cell?.newsText.text = news.newsText
         
         guard let newCell = cell else {

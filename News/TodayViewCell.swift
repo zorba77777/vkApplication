@@ -12,12 +12,6 @@ class TodayViewCell: UITableViewCell {
 
     @IBOutlet weak var authorName: UILabel!
     
-    @IBOutlet weak var likesCount: UILabel!
-    
-    @IBOutlet weak var repostsCount: UILabel!
-    
-    @IBOutlet weak var viewsCount: UILabel!
-    
     @IBOutlet weak var newsText: UILabel!
     
 }

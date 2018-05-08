@@ -40,6 +40,7 @@
 		24729973207E8F020075AEE5 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24729971207E8F020075AEE5 /* MainInterface.storyboard */; };
 		24729977207E8F020075AEE5 /* News.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2472996B207E8F020075AEE5 /* News.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		247BCD4C2093A09F00806AC2 /* UploadUrlDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247BCD4B2093A09F00806AC2 /* UploadUrlDeserializer.swift */; };
+		247D076720A0E624001E1507 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 247D076620A0E624001E1507 /* CloudKit.framework */; };
 		2487F5562083B919002CADA8 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2487F5552083B919002CADA8 /* Messages.framework */; };
 		2487F5592083B919002CADA8 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2487F5582083B919002CADA8 /* MessagesViewController.swift */; };
 		2487F55C2083B919002CADA8 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2487F55A2083B919002CADA8 /* MainInterface.storyboard */; };
@@ -182,6 +183,7 @@
 		24729974207E8F020075AEE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2472997C207E8FA30075AEE5 /* vkApplication.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = vkApplication.entitlements; sourceTree = "<group>"; };
 		247BCD4B2093A09F00806AC2 /* UploadUrlDeserializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadUrlDeserializer.swift; sourceTree = "<group>"; };
+		247D076620A0E624001E1507 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		2487F5542083B919002CADA8 /* VkMessages.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = VkMessages.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		2487F5552083B919002CADA8 /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
 		2487F5582083B919002CADA8 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A01190604F660CFE7239B63B /* Pods_vkApplication.framework in Frameworks */,
+				247D076720A0E624001E1507 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,6 +508,7 @@
 		56FCDC116358E254362F3842 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				247D076620A0E624001E1507 /* CloudKit.framework */,
 				C9F2587891323F30F8AFDC73 /* Pods_vkApplication.framework */,
 				2472996C207E8F020075AEE5 /* NotificationCenter.framework */,
 				2487F5552083B919002CADA8 /* Messages.framework */,
@@ -653,6 +657,12 @@
 								enabled = 1;
 							};
 							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
 								enabled = 1;
 							};
 						};

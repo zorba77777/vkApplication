@@ -68,7 +68,11 @@ class PostViewController: UIViewController, CLLocationManagerDelegate {
     }
 
     @IBAction func addLocation(_ sender: UIButton) {
-        let coordinates = "\nlatitude = \(self.latitude!) \nlongitude = \(self.longitude!)"
+        guard let latitude = self.latitude, let longitude = self.longitude else {
+            print("Something went wrong with coordinates")
+            return
+        }
+        let coordinates = "\nlatitude = \(latitude) \nlongitude = \(longitude)"
         self.post.text = self.post.text + coordinates
     }
     

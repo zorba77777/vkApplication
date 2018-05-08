@@ -35,7 +35,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
             return
         }
         
-        if self.newsNumber < dictionary.count {
+        if self.newsNumber < (dictionary.count - 1) {
             self.newsNumber += 1
         } else {
             self.newsNumber = 0
